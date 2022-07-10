@@ -24,17 +24,16 @@ body {
     grid-template-areas: "description image";
 }
 .image-wrapper {
-    border: 0.5px solid red;
-    border-radius: 0 5px 5px 0;
     grid-area: image;
+    background-color: var(--violet);
+    background-blend-mode: multiply;
 }
 
 img {
     width: 100%;
-    /*
-    max-width: 100%;
-    height: auto;
-    */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 5px 5px 0;
 }
 
 .flex-description {
@@ -47,16 +46,17 @@ img {
     justify-content: space-around;
 }
 .title * {
+    color: var(--White);
     display: inline;
     Font-size: 28px;
     line-height: 28px;
 }
-.title > h1 {}
 .purple-text {
     color: var(--violet);
     font-family: sans-serif;
 }
 .flex-description > p {
+    color: var(--darkWhite);
     margin-bottom: 15px;
     margin-top: -20px;
 }
@@ -64,10 +64,7 @@ img {
     display: flex;
     justify-content: space-between;
 }
-.info {
-
-}
-h1 {
+.flex-info  h1 {
     color: var(--White);
     Font-size: 20px;
     font-weight: 700;
@@ -81,14 +78,56 @@ p {
 }
 
 
-/*========== Mobile =========================*/
-@media screen and (max-width: 700px) {
-   body {
-        background-color: blue;
+/*========== Medium-Desktop =========================*/
+@media screen and (max-width: 1095px) {
+    .flex-description {
+        padding: 20px 55px 20px 40px;
     }
-   .grid-wrapper {
-        grid-template-columns: 300px;
+    .title * {
+        Font-size: 26px;
+    }
+    .flex-description > p {
+        margin-bottom: unset;
+        margin-top: unset;
+    }
+    
+}
+
+
+/*========== Small-Desktop =========================*/
+@media screen and (max-width: 976px) {
+    .flex-description {
+        padding: 15px 25px 15px 35px;
+    }
+    .title * {
+        Font-size: 24px;
+    }
+    .flex-description > p {
+        Font-size: 13px;
+    }
+    .flex-info  h1 {
+        Font-size: 18px;
+    }
+    .flex-info  p {
+        Font-size: 10px;
     }
 }
 
+
+/*========== Medium-Mobile =========================*/
+@media screen and (max-width: 848px) {
+    body {
+         background-color: rgb(223, 170, 170);
+     }
+    
+ }
+
+
+/*========== Small-Mobile =========================*/
+@media screen and (max-width: 500px) {
+    body {
+         background-color: white;
+     }
+    
+ }
 
