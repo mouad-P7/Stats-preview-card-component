@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- [Live Site URL](https://mouad-p7.github.io/stats-preview-card-component/)
+- [Live Site URL](https://mouad-p7.github.io/Stats-preview-card-component/)
 
 ## My process
 
